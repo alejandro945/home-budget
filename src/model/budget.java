@@ -22,6 +22,7 @@ public class budget{
 		String [] labours = new String [quantLabours];
 		sc.nextLine();
 		for(i=0 ; i<quantLabours ; i++){
+			System.out.println("Procede a ingresar el tipo de la Obra " + (i + 1));
 			labours[i] = sc.nextLine();
 		}
 		return labours;
@@ -60,7 +61,7 @@ public class budget{
 		int m = 0;
 		int[] pricehomecenterlabOne = new int[quantMaterials[0]];
 		for(m = 0; m<pricehomecenterlabOne.length; m++){
-		System.out.println("Ingrese el valor de " + materialslabOne[m] + " en " + HOMECENTER);
+		System.out.println("Ingrese el valor unitario de " + materialslabOne[m] + " en " + HOMECENTER);
 		pricehomecenterlabOne[m] = sc.nextInt();
 		}
 		return pricehomecenterlabOne;
@@ -69,7 +70,7 @@ public class budget{
 		int n = 0;
 		int[] pricewarecenterlabOne = new int[quantMaterials[0]];
 		for(n = 0; n<pricewarecenterlabOne.length; n++){
-		System.out.println("Ingrese el valor de " + materialslabOne[n] + " en " + CENTER_HARDWARE_STORE);
+		System.out.println("Ingrese el valor unitario de " + materialslabOne[n] + " en " + CENTER_HARDWARE_STORE);
 		pricewarecenterlabOne[n] = sc.nextInt();
 		}
 		return pricewarecenterlabOne;
@@ -78,7 +79,7 @@ public class budget{
 		int o = 0;
 		int[] pricewareneighlabOne = new int[quantMaterials[0]];
 		for(o = 0; o<pricewareneighlabOne.length; o++){
-		System.out.println("Ingrese el valor de " + materialslabOne[o] + " en " + NEIGHBORHOOD_HARDWARE_STORE);
+		System.out.println("Ingrese el valor unitario de " + materialslabOne[o] + " en " + NEIGHBORHOOD_HARDWARE_STORE);
 		pricewareneighlabOne[o] = sc.nextInt();
 		}
 		return pricewareneighlabOne;
@@ -87,8 +88,9 @@ public class budget{
 		public static String [] setmaterialslabTwo(Scanner sc,String [] labours,int[] quantMaterials){
 		int k = 0;
 		String[] materialslabTwo = new String[quantMaterials[1]];
+		sc.nextLine();
 		for(k = 0; k<materialslabTwo.length; k++){
-		System.out.println("Ahora procede a ingresar el material " + (k + 1) + " que necesitas para la obra " + labours[k]);
+		System.out.println("Ahora procede a ingresar el material " + (k + 1) + " que necesitas para la obra " + labours[1]);
 		materialslabTwo[k] = sc.nextLine();
 		}
 		return materialslabTwo;
@@ -106,7 +108,7 @@ public class budget{
 		int m = 0;
 		int[] pricehomecenterlabTwo = new int[quantMaterials[1]];
 		for(m = 0; m<pricehomecenterlabTwo.length; m++){
-		System.out.println("Ingrese el valor de " + materialslabTwo[m] + " en " + HOMECENTER);
+		System.out.println("Ingrese el valor unitario de " + materialslabTwo[m] + " en " + HOMECENTER);
 		pricehomecenterlabTwo[m] = sc.nextInt();
 		}
 		return pricehomecenterlabTwo;
@@ -115,7 +117,7 @@ public class budget{
 		int n = 0;
 		int[] pricewarecenterlabTwo = new int[quantMaterials[1]];
 		for(n = 0; n<pricewarecenterlabTwo.length; n++){
-		System.out.println("Ingrese el valor de " + materialslabTwo[n] + " en " + CENTER_HARDWARE_STORE);
+		System.out.println("Ingrese el valor unitario de " + materialslabTwo[n] + " en " + CENTER_HARDWARE_STORE);
 		pricewarecenterlabTwo[n] = sc.nextInt();
 		}
 		return pricewarecenterlabTwo;
@@ -124,7 +126,7 @@ public class budget{
 		int o = 0;
 		int[] pricewareneighlabTwo = new int[quantMaterials[1]];
 		for(o = 0; o<pricewareneighlabTwo.length; o++){
-		System.out.println("Ingrese el valor de " + materialslabTwo[o] + " en " + NEIGHBORHOOD_HARDWARE_STORE);
+		System.out.println("Ingrese el valor unitario de " + materialslabTwo[o] + " en " + NEIGHBORHOOD_HARDWARE_STORE);
 		pricewareneighlabTwo[o] = sc.nextInt();
 		}
 		return pricewareneighlabTwo;
@@ -133,8 +135,9 @@ public class budget{
 		public static String [] setmaterialslabThree(Scanner sc,String [] labours,int[] quantMaterials){
 		int k = 0;
 		String[] materialslabThree = new String[quantMaterials[2]];
+		sc.nextLine();
 		for(k = 0; k<materialslabThree.length; k++){
-		System.out.println("Ahora procede a ingresar el material " + (k + 1) + " que necesitas para la obra " + labours[k]);
+		System.out.println("Ahora procede a ingresar el material " + (k + 1) + " que necesitas para la obra " + labours[2]);
 		materialslabThree[k] = sc.nextLine();
 		}
 		return materialslabThree;
@@ -152,7 +155,7 @@ public class budget{
 		int m = 0;
 		int[] pricehomecenterlabThree = new int[quantMaterials[2]];
 		for(m = 0; m<pricehomecenterlabThree.length; m++){
-		System.out.println("Ingrese el valor de " + materialslabThree[m] + " en " + HOMECENTER);
+		System.out.println("Ingrese el valor unitario de " + materialslabThree[m] + " en " + HOMECENTER);
 		pricehomecenterlabThree[m] = sc.nextInt();
 		}
 		return pricehomecenterlabThree;
@@ -161,7 +164,7 @@ public class budget{
 		int n = 0;
 		int[] pricewarecenterlabThree = new int[quantMaterials[2]];
 		for(n = 0; n<pricewarecenterlabThree.length; n++){
-		System.out.println("Ingrese el valor de " + materialslabThree[n] + " en " + CENTER_HARDWARE_STORE);
+		System.out.println("Ingrese el valor unitario de " + materialslabThree[n] + " en " + CENTER_HARDWARE_STORE);
 		pricewarecenterlabThree[n] = sc.nextInt();
 		}
 		return pricewarecenterlabThree;
@@ -170,9 +173,25 @@ public class budget{
 		int o = 0;
 		int[] pricewareneighlabThree = new int[quantMaterials[2]];
 		for(o = 0; o<pricewareneighlabThree.length; o++){
-		System.out.println("Ingrese el valor de " + materialslabThree[o] + " en " + NEIGHBORHOOD_HARDWARE_STORE);
+		System.out.println("Ingrese el valor unitario de " + materialslabThree[o] + " en " + NEIGHBORHOOD_HARDWARE_STORE);
 		pricewareneighlabThree[o] = sc.nextInt();
 		}
 		return pricewareneighlabThree;
+	}
+	//-------------------------------------------------------Show materials--------------------------------------------------------------------
+	public static void showMaterials(String [] labours, String [] materialslabOne, String [] materialslabTwo, String [] materialslabThree){
+		int a = 0, b = 0, c = 0;
+		System.out.println("Los materiales ingresados para la Obra " + labours[0] + " fueron:");
+		for(a = 0 ; a<materialslabOne.length ; a++){
+			System.out.println(materialslabOne[a] + " " );	
+		}
+		System.out.println("Los materiales ingresados para la Obra " + labours[1] + " fueron:");
+		for(b = 0 ; b<materialslabTwo.length ; b++){
+			System.out.println(materialslabTwo[b] + " " );	
+		}
+		System.out.println("Los materiales ingresados para la Obra " + labours[2] + " fueron:");
+		for(c = 0 ; c<materialslabThree.length ; c++){
+			System.out.println(materialslabThree[c] + " " );	
+		}
 	}
 		}		
