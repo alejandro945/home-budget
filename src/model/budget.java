@@ -1,9 +1,9 @@
 package model;
 import java.util.Scanner;
 public class budget{
-    //--------------------------------------------Object----------------------------------------------------------------
+    //--------------------------------------------Object---------------------------------------------------------------------------------------
 	Scanner sc = new Scanner(System.in);
-    //------------------------------------------------Const------------------------------------------------------------
+    //------------------------------------------------Const-------------------------------------------------------------------------------------
     private final static int BLACK_LABOUR_VALUE = 1300000;
 	private final static int WHITE_LABOUR_VALUE = 2600000;
 	private final static int PAINT_LABOUR_VALUE = 980000;
@@ -11,7 +11,7 @@ public class budget{
 	private final static String CENTER_HARDWARE_STORE = "Ferreteria del centro";
 	private final static String NEIGHBORHOOD_HARDWARE_STORE = "Ferreteria del barrio";
     //----------------------------------------------Methods-------------------------------------------------------------------------------------
-	//--------------------------------------------array labores-----------------------------------------
+	//--------------------------------------------Labours array -------------------------------------------------------------------------------
 	public static String [] getLabours (Scanner sc){
 		int quantLabours;
 		int i = 0;
@@ -26,7 +26,7 @@ public class budget{
 		}
 		return labours;
 	}
-	//-----------------------------------------------------array cantidad materiales para cada obra----------------------------
+	//----------------------------------------------------- Quantity of materials for each labour array-----------------------------------------------
 	public static int[] setquantArray (Scanner sc,String [] labours){
 		int j = 0;
 		int[] quantMaterials = new int[labours.length];
@@ -40,8 +40,9 @@ public class budget{
 	public static String [] setmaterialslabOne(Scanner sc,String [] labours,int[] quantMaterials){
 		int k = 0;
 		String[] materialslabOne = new String[quantMaterials[0]];
+		sc.nextLine();
 		for(k = 0; k<materialslabOne.length; k++){
-		System.out.println("Ahora procede a ingresar el material " + (k + 1) + " que necesitas para la obra " + labours[k]);
+		System.out.println("Ahora procede a ingresar el material " + (k + 1) + " que necesitas para la obra " + labours[0]);
 		materialslabOne[k] = sc.nextLine();
 		}
 		return materialslabOne;
