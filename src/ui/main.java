@@ -16,11 +16,15 @@ public class main{
 		   int [] pricehomecenterlabTwo = budget.setpricehomecenterlabTwo(sc,quantMaterials,materialslabTwo);
 		   int [] pricewarecenterlabTwo = budget.setpricewarecenterlabTwo(sc,quantMaterials,materialslabTwo);
 		   int [] pricewareneighlabTwo = budget.setpricewareneighlabTwo(sc,quantMaterials,materialslabTwo);
-		   String [] materialslabThree  = budget.setmaterialslabThree(sc,labours,quantMaterials);
+		   String [] materialslabThree = budget.setmaterialslabThree(sc,labours,quantMaterials);
 		   int [] quantmaterialslabThree = budget.setquantmaterialslabThree(sc,quantMaterials,materialslabThree);
 		   int [] pricehomecenterlabThree = budget.setpricehomecenterlabThree(sc,quantMaterials,materialslabThree);
 		   int [] pricewarecenterlabThree = budget.setpricewarecenterlabThree(sc,quantMaterials,materialslabThree);
 		   int [] pricewareneighlabThree = budget.setpricewareneighlabThree(sc,quantMaterials,materialslabThree);
+		   int totalmaterialsHomecenter = budget.payatHomecenter(labours,quantMaterials,materialslabOne,quantmaterialslabOne,pricehomecenterlabOne,materialslabTwo,quantmaterialslabTwo,pricehomecenterlabTwo,materialslabThree,quantmaterialslabThree,pricehomecenterlabThree);
+		   int totalmaterialsWarecenter = budget.payatWarecenter(labours,quantMaterials,materialslabOne,quantmaterialslabOne,pricewarecenterlabOne,materialslabTwo,quantmaterialslabTwo,pricewarecenterlabTwo,materialslabThree,quantmaterialslabThree,pricewarecenterlabThree);
+		   int totalmaterialsWareneigh = budget.payatWareneigh(labours,quantMaterials,materialslabOne,quantmaterialslabOne,pricewareneighlabOne,materialslabTwo,quantmaterialslabTwo,pricewareneighlabTwo,materialslabThree,quantmaterialslabThree,pricewareneighlabThree);
+		   int [] delivery = budget.priceDelivery(sc,totalmaterialsHomecenter,totalmaterialsWarecenter,totalmaterialsWareneigh);
 		   budget.showMaterials(labours,materialslabOne,materialslabTwo,materialslabThree);
 		  System.out.println("Gracias por usar nuestros servicios"); 
 	   }
