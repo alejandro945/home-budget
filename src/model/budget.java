@@ -194,4 +194,113 @@ public class budget{
 			System.out.println(materialslabThree[c] + " " );	
 		}
 	}
+	//-----------------------------------------------------Results---------------------------------------------------------------------------
+	public static void totaltopay(String [] labours,int[] quantMaterials, String [] materialslabOne, int[] quantmaterialslabOne, int[] pricehomecenterlabOne, int[] pricewarecenterlabOne, int[] pricewareneighlabOne, String [] materialslabTwo, int[] quantmaterialslabTwo, int[] pricehomecenterlabTwo, int[] pricewarecenterlabTwo, int[] pricewareneighlabTwo, String [] materialslabThree, int[] quantmaterialslabThree, int[] pricehomecenterlabThree, int[] pricewarecenterlabThree, int[] pricewareneighlabThree){
+	System.out.println("----------------Hemos generado los siguentes resultados----------------");	
+	    int d = 0,e = 0, f = 0;
+		int [] totalhomecenterlabourOne = new int[quantMaterials[0]];
+		int [] totalwarecenterlabourOne = new int[quantMaterials[0]];
+		int [] totalwareneighlabourOne = new int[quantMaterials[0]];
+	    int [] totalhomecenterlabourTwo = new int[quantMaterials[1]];
+		int [] totalwarecenterlabourTwo = new int[quantMaterials[1]];
+		int [] totalwareneighlabourTwo = new int[quantMaterials[1]];
+	    int [] totalhomecenterlabourThree = new int[quantMaterials[2]];
+		int [] totalwarecenterlabourThree = new int[quantMaterials[2]];
+		int [] totalwareneighlabourThree = new int[quantMaterials[2]];
+		int sumhomecenterlabourOne = 0, sumwarecenterlabourOne = 0, sumwareneighlabourOne = 0;
+		int sumhomecenterlabourTwo = 0, sumwarecenterlabourTwo = 0, sumwareneighlabourTwo = 0;
+		int sumhomecenterlabourThree = 0, sumwarecenterlabourThree = 0, sumwareneighlabourThree = 0;
+		System.out.println("Para la Obra " + labours[0] + " .Se registro lo siguente:");
+		for(d = 0; d<materialslabOne.length; d++){
+		  totalhomecenterlabourOne [d] = (quantmaterialslabOne[d]*pricehomecenterlabOne[d]);
+		  totalwarecenterlabourOne [d] = (quantmaterialslabOne[d]*pricewarecenterlabOne[d]);
+		  totalwareneighlabourOne [d] = (quantmaterialslabOne[d]*pricewareneighlabOne[d]);
+		  System.out.println(quantmaterialslabOne[d] + " de " + materialslabOne[d] + ". Con un valor total en " + HOMECENTER + " de $" + totalhomecenterlabourOne[d] + ", en " + CENTER_HARDWARE_STORE + " de $" + totalwarecenterlabourOne [d] + " y en " + NEIGHBORHOOD_HARDWARE_STORE + " de $" + totalwareneighlabourOne);
+		  sumhomecenterlabourOne += totalhomecenterlabourOne[d];
+		  sumwarecenterlabourOne += totalwarecenterlabourOne[d];
+		  sumwareneighlabourOne += totalwareneighlabourOne[d];
+		}
+		System.out.println("Para la Obra " + labours[1] + " .Se registro lo siguente:");
+		for(e = 0; e<materialslabTwo.length; e++){
+		  totalhomecenterlabourTwo [e] = (quantmaterialslabTwo[e]*pricehomecenterlabTwo[e]);
+		  totalwarecenterlabourTwo [e] = (quantmaterialslabTwo[e]*pricewarecenterlabTwo[e]);
+		  totalwareneighlabourTwo [e] = (quantmaterialslabTwo[e]*pricewareneighlabTwo[e]);
+		  System.out.println(quantmaterialslabTwo[e] + " de " + materialslabTwo[e] + ". Con un valor total en " + HOMECENTER + " de $" + (quantmaterialslabTwo[e]*pricehomecenterlabTwo[e]) + ", en " + CENTER_HARDWARE_STORE + " de $" + (quantmaterialslabTwo[e]*pricewarecenterlabTwo[e]) + " y en " + NEIGHBORHOOD_HARDWARE_STORE + " de $" + (quantmaterialslabTwo[e]*pricewareneighlabTwo[e]));
+		  sumhomecenterlabourTwo += totalhomecenterlabourTwo[e];
+		  sumwarecenterlabourTwo += totalwarecenterlabourTwo[e];
+		  sumwareneighlabourTwo += totalwareneighlabourTwo[e];
+		}
+		System.out.println("Para la Obra " + labours[2] + " .Se registro lo siguente:");
+		for(f = 0; f<materialslabThree.length; f++){
+		  totalhomecenterlabourThree [f] = (quantmaterialslabThree[f]*pricehomecenterlabThree[f]);
+		  totalwarecenterlabourThree [f] = (quantmaterialslabThree[f]*pricewarecenterlabThree[f]);
+		  totalwareneighlabourThree [f] = (quantmaterialslabThree[f]*pricewareneighlabThree[f]);
+		  System.out.println(quantmaterialslabThree[f] + " de " + materialslabThree[f] + ". Con un valor total en " + HOMECENTER + " de $" + (quantmaterialslabThree[f]*pricehomecenterlabThree[f]) + ", en " + CENTER_HARDWARE_STORE + " de $" + (quantmaterialslabThree[f]*pricewarecenterlabThree[f]) + " y en " + NEIGHBORHOOD_HARDWARE_STORE + " de $" + (quantmaterialslabThree[f]*pricewareneighlabThree[f]));
+		  sumhomecenterlabourThree += totalhomecenterlabourThree[f];
+		  sumwarecenterlabourThree += totalwarecenterlabourThree[f];
+		  sumwareneighlabourThree += totalwareneighlabourThree[f];
+		}
+		//---------------------------------------total for each hardware-------------------------------------------------
+		System.out.println("----------------Hemos generado los siguentes valores totales----------------");	
+		System.out.println("----------------HOMECENTER----------------");	
+		System.out.println("Total a Pagar materiales: $" + (sumhomecenterlabourOne+sumhomecenterlabourTwo+sumhomecenterlabourThree));
+		
+		System.out.println("Total a Pagar materiales en Ferreteria del centro: $" + (sumwarecenterlabourOne+sumwarecenterlabourTwo+sumwarecenterlabourThree));
+		System.out.println("Total a Pagar materiales en Ferreteria del barrio: $" + (sumwareneighlabourOne+sumwareneighlabourTwo+sumwareneighlabourThree));
+	}
+	//-----------------------------------------------receipt for each hardware store----------------------------------------------
+        public static int payatHomecenter (String [] labours,int[] quantMaterials, String [] materialslabOne, int[] quantmaterialslabOne, int[] pricehomecenterlabOne,String [] materialslabTwo, int[] quantmaterialslabTwo, int[] pricehomecenterlabTwo,String [] materialslabThree, int[] quantmaterialslabThree, int[] pricehomecenterlabThree){
+	       	System.out.println("----------------Hemos generado los siguentes resultados----------------");	
+			int d = 0,e = 0, f = 0;
+		    int [] totalhomecenterlabourOne = new int[quantMaterials[0]];
+			int [] totalhomecenterlabourTwo = new int[quantMaterials[1]];
+			int [] totalhomecenterlabourThree = new int[quantMaterials[2]];
+			int totalmaterialsHomecenter = 0,sumhomecenterlabourOne = 0, int sumhomecenterlabourTwo = 0,int sumhomecenterlabourThree = 0;
+			System.out.println("Para la Obra " + labours[0] + " .Se registro lo siguente:");
+		    for(d = 0; d<materialslabOne.length; d++){
+		     totalhomecenterlabourOne [d] = (quantmaterialslabOne[d]*pricehomecenterlabOne[d]);
+		     System.out.println(quantmaterialslabOne[d] + " de " + materialslabOne[d] + ". Con un valor total en " + HOMECENTER + " de $" + totalhomecenterlabourOne[d]);
+		     sumhomecenterlabourOne += totalhomecenterlabourOne[d];
+		    }
+		    System.out.println("Para la Obra " + labours[1] + " .Se registro lo siguente:");
+		    for(e = 0; e<materialslabTwo.length; e++){
+		     totalhomecenterlabourTwo [e] = (quantmaterialslabTwo[e]*pricehomecenterlabTwo[e]);
+		     System.out.println(quantmaterialslabTwo[e] + " de " + materialslabTwo[e] + ". Con un valor total en " + HOMECENTER + " de $" + totalhomecenterlabourTwo[e]);
+		     sumhomecenterlabourTwo += totalhomecenterlabourTwo[e];
+		    }
+			for(f = 0; f<materialslabThree.length; f++){
+		     totalhomecenterlabourThree [f] = (quantmaterialslabThree[f]*pricehomecenterlabThree[f]);
+		     System.out.println(quantmaterialslabThree[f] + " de " + materialslabThree[f] + ". Con un valor total en " + HOMECENTER + " de $" + totalhomecenterlabourThree[f]);
+		     sumhomecenterlabourThree += totalhomecenterlabourThree[f];
+		     }	 
+			 totalmaterialsHomecenter = (sumhomecenterlabourOne+sumhomecenterlabourTwo+sumhomecenterlabourThree);
+			 return totalmaterialsHomecenter;
+        }
+		public static int payatWarecenter (String [] labours,int[] quantMaterials, String [] materialslabOne, int[] quantmaterialslabOne, int[] pricewarecenterlabOne,String [] materialslabTwo, int[] quantmaterialslabTwo, int[] pricewarecenterlabTwo,String [] materialslabThree, int[] quantmaterialslabThree, int[] pricewarecenterlabThree){
+			int d = 0,e = 0, f = 0;
+		    int [] totalwarecenterlabourOne = new int[quantMaterials[0]];
+			int [] totalwarecenterlabourTwo = new int[quantMaterials[1]];
+			int [] totalwarecenterlabourThree = new int[quantMaterials[2]];
+			int totalmaterialsWarecenter = 0,sumwarecenterlabourOne = 0, sumwarecenterlabourTwo = 0, sumwareneighlabourTwo = 0;
+			System.out.println("Para la Obra " + labours[0] + " .Se registro lo siguente:");
+		    for(d = 0; d<materialslabOne.length; d++){
+		     totalwarecenterlabourOne [d] = (quantmaterialslabOne[d]*pricewarecenterlabOne[d]);
+		     System.out.println(quantmaterialslabOne[d] + " de " + materialslabOne[d] + ". Con un valor total en " + CENTER_HARDWARE_STORE + " de $" + totalwarecenterlabourOne [d]);
+		     sumwarecenterlabourOne += totalwarecenterlabourOne[d];
+		    }
+		    System.out.println("Para la Obra " + labours[1] + " .Se registro lo siguente:");
+		    for(e = 0; e<materialslabTwo.length; e++){
+		     totalwarecenterlabourTwo [e] = (quantmaterialslabTwo[e]*pricewarecenterlabTwo[e]);
+		     System.out.println(quantmaterialslabTwo[e] + " de " + materialslabTwo[e] + ". Con un valor total en " + CENTER_HARDWARE_STORE + " de $" + totalwarecenterlabourTwo[e]);
+		     sumwarecenterlabourTwo += totalwarecenterlabourTwo[e];
+		    }
+			for(f = 0; f<materialslabThree.length; f++){
+		     totalhomecenterlabourThree [f] = (quantmaterialslabThree[f]*pricehomecenterlabThree[f]);
+		     System.out.println(quantmaterialslabThree[f] + " de " + materialslabThree[f] + ". Con un valor total en " + CENTER_HARDWARE_STORE + " de $" + totalwarecenterlabourThree[f]);
+		     sumwarecenterlabourThree += totalwarecenterlabourThree[f];
+		     }	 
+			 totalmaterialsWarecenter = (sumwarecenterlabourOne+sumwarecenterlabourTwo+sumwarecenterlabourThree);
+			 return totalmaterialsWarecenter;
+        }
+		
 		}		
