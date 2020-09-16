@@ -26,7 +26,8 @@ public class main{
 		   int totalmaterialsWareneigh = budget.payatWareneigh(labours,quantMaterials,materialslabOne,quantmaterialslabOne,pricewareneighlabOne,materialslabTwo,quantmaterialslabTwo,pricewareneighlabTwo,materialslabThree,quantmaterialslabThree,pricewareneighlabThree);
 		   int [] delivery = budget.priceDelivery(sc,totalmaterialsHomecenter,totalmaterialsWarecenter,totalmaterialsWareneigh);
 		   budget.showMaterials(labours,materialslabOne,materialslabTwo,materialslabThree);
-		  System.out.println("Gracias por usar nuestros servicios"); 
+		   budget.totaltoPay(labours,delivery,totalmaterialsHomecenter,totalmaterialsWarecenter,totalmaterialsWareneigh);
+		 System.out.println("Gracias por usar nuestros servicios"); 
 	   }
  
 }
