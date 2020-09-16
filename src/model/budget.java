@@ -216,6 +216,75 @@ public class budget{
 		System.out.println("Total a Pagar Domicilio: --------$" + delivery[2]);
 		System.out.println("-----------NETO A PAGAR:-------- $" + (totalmaterialsWareneigh+ROUGH_CONSTRUCTION_VALUE+FINAL_CONSTRUCTION_VALUE+PAINT_LABOUR_VALUE+delivery[2]));
 	}
+	//-------------------------------------------------Best Prices------------------------------------------------------------------------------------------------
+    public static void bestPrices(String[] labours, String [] materialslabOne, String [] materialslabTwo, String [] materialslabThree, int[] quantMaterials, int[] quantmaterialslabOne, int[] pricehomecenterlabOne, int[] pricewarecenterlabOne,int[] pricewareneighlabOne, int[] quantmaterialslabTwo, int[] pricehomecenterlabTwo, int[] pricewarecenterlabTwo, int[] pricewareneighlabTwo, int[] quantmaterialslabThree, int[] pricehomecenterlabThree, int[] pricewarecenterlabThree, int[] pricewareneighlabThree){
+		int bestPrice = 0,totalbestlabourOne = 0, totalbestlabourTwo = 0, totalbestlabourThree = 0, h = 0, p = 0, q = 0, r = 0, s = 0, t = 0;
+		int[] bestpricelabourOne = new int[quantMaterials[0]];
+		String [] bestwarelabourOne = new String[quantMaterials[0]];
+		int[] bestpricelabourTwo = new int[quantMaterials[1]];
+		String[] bestwarelabourTwo = new String[quantMaterials[1]];
+		int[] bestpricelabourThree = new int[quantMaterials[2]];
+		String[] bestwarelabourThree = new String[quantMaterials[2]];
+		for(h = 0; h<materialslabOne.length ; h++){
+			if(pricehomecenterlabOne[h]<=pricewarecenterlabOne[h] && pricehomecenterlabOne[h]<=pricewareneighlabOne[h]){
+				bestpricelabourOne [h] = (pricehomecenterlabOne[h]*quantmaterialslabOne[h]);
+				bestwarelabourOne [h] = HOMECENTER;
+			}else if(pricewarecenterlabOne[h]<=pricewareneighlabOne[h]){
+				bestpricelabourOne [h] = (pricewarecenterlabOne[h]*quantmaterialslabOne[h]);
+				bestwarelabourOne [h] = CENTER_HARDWARE_STORE;
+			}else{
+				bestpricelabourOne [h] = (pricewareneighlabOne[h]*quantmaterialslabOne[h]);
+				bestwarelabourOne [h] = NEIGHBORHOOD_HARDWARE_STORE;
+			}
+		}
+		for(p = 0; p<materialslabTwo.length ; p++){
+			if(pricehomecenterlabTwo[p]<=pricewarecenterlabTwo[p] && pricehomecenterlabTwo[p]<=pricewareneighlabTwo[p]){
+				bestpricelabourTwo [p] = (pricehomecenterlabTwo[p]*quantmaterialslabTwo[p]);
+				bestwarelabourTwo [p] = HOMECENTER;
+			}else if(pricewarecenterlabOne[p]<=pricewareneighlabTwo[p]){
+				bestpricelabourTwo [p] = (pricewarecenterlabTwo[p]*quantmaterialslabTwo[p]);
+				bestwarelabourTwo [p] = CENTER_HARDWARE_STORE;
+			}else{
+				bestpricelabourTwo [p] = (pricewareneighlabTwo[p]*quantmaterialslabTwo[p]);
+				bestwarelabourTwo [p] = NEIGHBORHOOD_HARDWARE_STORE;
+			}
+		}
+		for(q = 0; q<materialslabThree.length ; q++){
+			if(pricehomecenterlabThree[q]<=pricewarecenterlabThree[q] && pricehomecenterlabThree[q]<=pricewareneighlabThree[q]){
+				bestpricelabourThree [q] = (pricehomecenterlabThree[q]*quantmaterialslabThree[q]);
+				bestwarelabourThree [q] = HOMECENTER;
+			}else if(pricewarecenterlabOne[q]<=pricewareneighlabThree[q]){
+				bestpricelabourThree [q] = (pricewarecenterlabThree[q]*quantmaterialslabThree[q]);
+				bestwarelabourThree [q] = CENTER_HARDWARE_STORE;
+			}else{
+				bestpricelabourThree [q] = (pricewareneighlabThree[q]*quantmaterialslabThree[q]);
+				bestwarelabourThree [q] = NEIGHBORHOOD_HARDWARE_STORE;
+			}
+		}
+		System.out.println("--------------------------PERO ESPERA TE RECOMENDAMOS ESTO---------------------------");
+		System.out.println("--------------------En la Obra " + labours[0] + "--------------------");
+		for(r = 0; r<materialslabOne.length ; r++){
+			System.out.println("El material: " + materialslabOne[r] + " es mejor comprarlo en " + bestwarelabourOne[r] + " con un valor total de $" + bestpricelabourOne[r]);
+			totalbestlabourOne += bestpricelabourOne[r];
+		}
+		System.out.println("--------------------En la Obra " + labours[1] + "--------------------");
+		for(s = 0; s<materialslabTwo.length ; s++){
+			System.out.println("El material: " + materialslabOne[s] + " es mejor comprarlo en " + bestwarelabourOne[s] + " con un valor total de $" + bestpricelabourOne[s]);
+			totalbestlabourTwo += bestpricelabourTwo[s];
+		}
+		System.out.println("--------------------En la Obra " + labours[2] + "--------------------");
+		for(t = 0; t<materialslabThree.length ; t++){
+			System.out.println("El material: " + materialslabOne[t] + " es mejor comprarlo en " + bestwarelabourOne[t] + " con un valor total de $" + bestpricelabourOne[t]);
+			totalbestlabourThree += bestpricelabourThree[t];
+		}
+		bestPrice = (totalbestlabourOne+totalbestlabourTwo+totalbestlabourThree);
+		System.out.println("--------------------------Y PAGARIAS ESTO:---------------------------");
+		System.out.println("Total a Pagar Materiales: ------$" + bestPrice);
+		System.out.println("Total a Pagar Obra " + labours[0] +": -----$" + ROUGH_CONSTRUCTION_VALUE);
+		System.out.println("Total a Pagar Obra " + labours[1] +": -----$" + FINAL_CONSTRUCTION_VALUE);
+		System.out.println("Total a Pagar Obra " + labours[2] +": -----$" + PAINT_LABOUR_VALUE);
+		System.out.println("-------NETO A PAGAR SIN DOMICILIO:-------- $" + (bestPrice+ROUGH_CONSTRUCTION_VALUE+FINAL_CONSTRUCTION_VALUE+PAINT_LABOUR_VALUE));
+	}
 	//--------------------------------------------------Domicilio----------------------------------------------------------------------------
     public static int[] priceDelivery (Scanner sc, int totalmaterialsHomecenter, int totalmaterialsWarecenter, int totalmaterialsWareneigh){
 		   int pricedeliveryHomecenter = 0 , pricedeliveryWarecenter = 0, pricedeliveryWareneigh = 0;
