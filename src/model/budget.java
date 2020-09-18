@@ -1,17 +1,20 @@
 package model;
 import java.util.Scanner;
 public class budget{
-    //--------------------------------------------Object---------------------------------------------------------------------------------------
 	Scanner sc = new Scanner(System.in);
-    //------------------------------------------------Const-------------------------------------------------------------------------------------
     private final static int ROUGH_CONSTRUCTION_VALUE = 1300000;
 	private final static int FINAL_CONSTRUCTION_VALUE = 2600000;
 	private final static int PAINT_LABOUR_VALUE = 980000;
 	private final static String HOMECENTER = "HomeCenter";
 	private final static String CENTER_HARDWARE_STORE = "Ferreteria del centro";
 	private final static String NEIGHBORHOOD_HARDWARE_STORE = "Ferreteria del barrio";
-    //----------------------------------------------Methods-------------------------------------------------------------------------------------
-	//--------------------------------------------Labours array -------------------------------------------------------------------------------
+	/**
+	* Gets the names of the types for each labour <br>
+    * <b> pre: </b> The types of the labours have to be ordered <br>
+    * <b> post: </b> It has been created an array type String with the names entered by console. <br>	
+	* @param sc object is initialized
+	* @return labours
+	*/
 	public static String [] getLabours (Scanner sc){
 		int i = 0;
 		String [] labours = new String [3];
@@ -21,7 +24,14 @@ public class budget{
 		}
 		return labours;
 	}
-	//----------------------------------------------------- Quantity of materials for each labour array-----------------------------------------------
+	/**
+	* Gets the quantity of materials for each labour <br>
+    * <b> pre: </b> The quantity have to be a positive integer number <br>
+    * <b> post: </b> It has been created an array type Int with the quantity entered by console for each labour. <br>	
+	* @param sc object is initialized
+	* @param labours Labours Array != null
+	* @return quantMaterials
+	*/
 	public static int[] setquantArray (Scanner sc,String [] labours){
 		int j = 0;
 		int[] quantMaterials = new int[labours.length];
@@ -31,7 +41,15 @@ public class budget{
 		}
 		return quantMaterials;
 	}
-	//-----------------------------------------array materiales, cantidad y precio de la labor 1 ----------------------------------------------------------
+	/**
+	* Gets the names of the materials for the first labour <br>
+    * <b> pre: </b> The names can not be empty <br>
+    * <b> post: </b> It has been created an array type String with the names of the materials entered by console for the first labour. <br>	
+	* @param sc object is initialized
+	* @param labours Labours Array != null
+	* @param quantMaterials Quantity of Materials Array != null
+	* @return materialslabOne
+	*/
 	public static String [] setmaterialslabOne(Scanner sc,String [] labours,int[] quantMaterials){
 		int k = 0;
 		String[] materialslabOne = new String[quantMaterials[0]];
