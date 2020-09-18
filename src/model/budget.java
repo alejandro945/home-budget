@@ -60,6 +60,15 @@ public class budget{
 		}
 		return materialslabOne;
 	}
+	/**
+	* Gets the quantity for each material in the first labour <br>
+    * <b> pre: </b> The quantity have to be a positive integer number <br>
+    * <b> post: </b> It has been created an array type Int with the quantity entered by console for each material in the first labour. <br>	
+	* @param sc object is initialized
+	* @param quantMaterials Quantity of Materials Array != null
+	* @param materialslabOne Names of the material Array for the first labour !=null
+	* @return quantmaterialslabOne
+	*/
 	public static int [] setquantmaterialslabOne(Scanner sc,int[] quantMaterials,String [] materialslabOne){
 		int l = 0;
 		int[] quantmaterialslabOne = new int[quantMaterials[0]];
@@ -69,6 +78,15 @@ public class budget{
 		}
 		return quantmaterialslabOne;
 	}
+	/**
+	* Gets the price at homecenter for each material in the first labour <br>
+    * <b> pre: </b> The price have to be a positive integer number <br>
+    * <b> post: </b> It has been created an array type Int with the price at homecenter entered by console for each material in the first labour. <br>	
+	* @param sc object is initialized
+	* @param quantMaterials Quantity of Materials Array != null
+	* @param materialslabOne Names of the material Array for the first labour !=null
+	* @return pricehomecenterlabOne
+	*/
 	public static int [] setpricehomecenterlabOne(Scanner sc,int[] quantMaterials,String [] materialslabOne){
 		int m = 0;
 		int[] pricehomecenterlabOne = new int[quantMaterials[0]];
@@ -78,6 +96,15 @@ public class budget{
 		}
 		return pricehomecenterlabOne;
 	}
+	/**
+	* Gets the price at center hardware store for each material in the first labour <br>
+    * <b> pre: </b> The price have to be a positive integer number <br>
+    * <b> post: </b> It has been created an array type Int with the price at center hardware store entered by console for each material in the first labour. <br>	
+	* @param sc object is initialized
+	* @param quantMaterials Quantity of Materials Array != null
+	* @param materialslabOne Names of the material Array for the first labour !=null
+	* @return pricewarecenterlabOne
+	*/
 	public static int [] setpricewarecenterlabOne(Scanner sc,int[] quantMaterials,String [] materialslabOne){
 		int n = 0;
 		int[] pricewarecenterlabOne = new int[quantMaterials[0]];
@@ -87,6 +114,15 @@ public class budget{
 		}
 		return pricewarecenterlabOne;
 	}
+	/**
+	* Gets the price at neighborhood hardware store for each material in the first labour <br>
+    * <b> pre: </b> The price have to be a positive integer number <br>
+    * <b> post: </b> It has been created an array type Int with the price at neighborhood hardware store entered by console for each material in the first labour. <br>	
+	* @param sc object is initialized
+	* @param quantMaterials Quantity of Materials Array != null
+	* @param materialslabOne Names of the material Array for the first labour !=null
+	* @return pricewareneighlabOne
+	*/
 	public static int [] setpricewareneighlabOne(Scanner sc,int[] quantMaterials,String [] materialslabOne){
 		int o = 0;
 		int[] pricewareneighlabOne = new int[quantMaterials[0]];
@@ -96,7 +132,15 @@ public class budget{
 		}
 		return pricewareneighlabOne;
 	}
-	//-----------------------------------------array materiales, cantidad y precio de la labor 2 ----------------------------------------------------------
+	/**
+	* Gets the names of the materials for the second labour <br>
+    * <b> pre: </b> The names can not be empty <br>
+    * <b> post: </b> It has been created an array type String with the names of the materials entered by console for the second labour. <br>	
+	* @param sc object is initialized
+	* @param labours Labours Array != null
+	* @param quantMaterials Quantity of Materials Array != null
+	* @return materialslabTwo
+	*/
 		public static String [] setmaterialslabTwo(Scanner sc,String [] labours,int[] quantMaterials){
 		int k = 0;
 		String[] materialslabTwo = new String[quantMaterials[1]];
@@ -107,6 +151,15 @@ public class budget{
 		}
 		return materialslabTwo;
 	}
+	/**
+	* Gets the quantity for each material in the second labour <br>
+    * <b> pre: </b> The quantity have to be a positive integer number <br>
+    * <b> post: </b> It has been created an array type Int with the quantity entered by console for each material in the second labour. <br>	
+	* @param sc object is initialized
+	* @param quantMaterials Quantity of Materials Array != null
+	* @param materialslabTwo Names of the material Array for the second labour !=null
+	* @return quantmaterialslabTwo
+	*/
 	public static int [] setquantmaterialslabTwo(Scanner sc,int[] quantMaterials,String [] materialslabTwo){
 		int l = 0;
 		int[] quantmaterialslabTwo = new int[quantMaterials[1]];
@@ -116,6 +169,15 @@ public class budget{
 		}
 		return quantmaterialslabTwo;
 	}
+	/**
+	* Gets the price at homecenter for each material in the second labour <br>
+    * <b> pre: </b> The price have to be a positive integer number <br>
+    * <b> post: </b> It has been created an array type Int with the price at homecenter entered by console for each material in the second labour. <br>	
+	* @param sc object is initialized
+	* @param quantMaterials Quantity of Materials Array != null
+	* @param materialslabTwo Names of the material Array for the second labour !=null
+	* @return pricehomecenterlabTwo
+	*/
 	public static int [] setpricehomecenterlabTwo(Scanner sc,int[] quantMaterials,String [] materialslabTwo){
 		int m = 0;
 		int[] pricehomecenterlabTwo = new int[quantMaterials[1]];
@@ -125,6 +187,15 @@ public class budget{
 		}
 		return pricehomecenterlabTwo;
 	}
+	/**
+	* Gets the price at center hardware store for each material in the second labour <br>
+    * <b> pre: </b> The price have to be a positive integer number <br>
+    * <b> post: </b> It has been created an array type Int with the price at center hardware store entered by console for each material in the second labour. <br>	
+	* @param sc object is initialized
+	* @param quantMaterials Quantity of Materials Array != null
+	* @param materialslabTwo Names of the material Array for the second labour !=null
+	* @return pricewarecenterlabTwo
+	*/
 	public static int [] setpricewarecenterlabTwo(Scanner sc,int[] quantMaterials,String [] materialslabTwo){
 		int n = 0;
 		int[] pricewarecenterlabTwo = new int[quantMaterials[1]];
@@ -134,6 +205,15 @@ public class budget{
 		}
 		return pricewarecenterlabTwo;
 	}
+	/**
+	* Gets the price at neighborhood hardware store for each material in the second labour <br>
+    * <b> pre: </b> The price have to be a positive integer number <br>
+    * <b> post: </b> It has been created an array type Int with the price at neighborhood hardware store entered by console for each material in the second labour. <br>	
+	* @param sc object is initialized
+	* @param quantMaterials Quantity of Materials Array != null
+	* @param materialslabTwo Names of the material Array for the second labour !=null
+	* @return pricewareneighlabTwo
+	*/
 	public static int [] setpricewareneighlabTwo(Scanner sc,int[] quantMaterials,String [] materialslabTwo){
 		int o = 0;
 		int[] pricewareneighlabTwo = new int[quantMaterials[1]];
@@ -143,7 +223,15 @@ public class budget{
 		}
 		return pricewareneighlabTwo;
 	}
-	//-----------------------------------------array materiales, cantidad y precio de la labor 3 ----------------------------------------------------------
+	/**
+	* Gets the names of the materials for the third labour <br>
+    * <b> pre: </b> The names can not be empty <br>
+    * <b> post: </b> It has been created an array type String with the names of the materials entered by console for the thrid labour. <br>	
+	* @param sc object is initialized
+	* @param labours Labours Array != null
+	* @param quantMaterials Quantity of Materials Array != null
+	* @return materialslabThree
+	*/
 		public static String [] setmaterialslabThree(Scanner sc,String [] labours,int[] quantMaterials){
 		int k = 0;
 		String[] materialslabThree = new String[quantMaterials[2]];
@@ -154,6 +242,15 @@ public class budget{
 		}
 		return materialslabThree;
 	}
+	/**
+	* Gets the quantity for each material in the third labour <br>
+    * <b> pre: </b> The quantity have to be a positive integer number <br>
+    * <b> post: </b> It has been created an array type Int with the quantity entered by console for each material in the third labour. <br>	
+	* @param sc object is initialized
+	* @param quantMaterials Quantity of Materials Array != null
+	* @param materialslabThree Names of the material Array for the third labour !=null
+	* @return quantmaterialslabThree
+	*/
 	public static int [] setquantmaterialslabThree(Scanner sc,int[] quantMaterials,String [] materialslabThree){
 		int l = 0;
 		int[] quantmaterialslabThree = new int[quantMaterials[2]];
@@ -163,6 +260,15 @@ public class budget{
 		}
 		return quantmaterialslabThree;
 	}
+    /**
+	* Gets the price at homecenter for each material in the third labour <br>
+    * <b> pre: </b> The price have to be a positive integer number <br>
+    * <b> post: </b> It has been created an array type Int with the price at homecenter entered by console for each material in the third labour. <br>	
+	* @param sc object is initialized
+	* @param quantMaterials Quantity of Materials Array != null
+	* @param materialslabThree Names of the material Array for the third labour !=null
+	* @return pricehomecenterlabThree
+	*/
 	public static int [] setpricehomecenterlabThree(Scanner sc,int[] quantMaterials,String [] materialslabThree){
 		int m = 0;
 		int[] pricehomecenterlabThree = new int[quantMaterials[2]];
@@ -172,6 +278,15 @@ public class budget{
 		}
 		return pricehomecenterlabThree;
 	}
+	/**
+	* Gets the price at center hardware store for each material in the third labour <br>
+    * <b> pre: </b> The price have to be a positive integer number <br>
+    * <b> post: </b> It has been created an array type Int with the price at center hardware storeentered by console for each material in the third labour. <br>	
+	* @param sc object is initialized
+	* @param quantMaterials Quantity of Materials Array != null
+	* @param materialslabThree Names of the material Array for the third labour !=null
+	* @return pricewarecenterlabThree
+	*/
 	public static int [] setpricewarecenterlabThree(Scanner sc,int[] quantMaterials,String [] materialslabThree){
 		int n = 0;
 		int[] pricewarecenterlabThree = new int[quantMaterials[2]];
@@ -181,6 +296,15 @@ public class budget{
 		}
 		return pricewarecenterlabThree;
 	}
+	/**
+	* Gets the price at neighborhood hardware store for each material in the third labour <br>
+    * <b> pre: </b> The price have to be a positive integer number <br>
+    * <b> post: </b> It has been created an array type Int with the price at neighborhood hardware store entered by console for each material in the third labour. <br>	
+	* @param sc object is initialized
+	* @param quantMaterials Quantity of Materials Array != null
+	* @param materialslabThree Names of the material Array for the third labour !=null
+	* @return pricewareneighlabThree
+	*/
 	public static int [] setpricewareneighlabThree(Scanner sc,int[] quantMaterials,String [] materialslabThree){
 		int o = 0;
 		int[] pricewareneighlabThree = new int[quantMaterials[2]];
@@ -190,18 +314,26 @@ public class budget{
 		}
 		return pricewareneighlabThree;
 	}
-	//-------------------------------------------------------Show materials--------------------------------------------------------------------
+	/**
+	* Shows previously entered materials for each labour <br>
+	* <b> pre: </b> <br>
+	* <b> post: </b> It will show all the materials entered by console <br>
+	* @param labours Labours Array != null
+	* @param materialslabOne Names of the material Array for the first labour !=null
+	* @param materialslabTwo Names of the material Array for the second labour !=null
+	* @param materialslabThree Names of the material Array for the third labour !=null
+	*/
 	public static void showMaterials(String [] labours, String [] materialslabOne, String [] materialslabTwo, String [] materialslabThree){
 		int a = 0, b = 0, c = 0;
-		System.out.println("Los materiales ingresados para la Obra " + labours[0] + " fueron:");
+		System.out.println("Para la Obra " + labours[0] + " fueron:");
 		for(a = 0 ; a<materialslabOne.length ; a++){
 			System.out.println(materialslabOne[a] + " " );	
 		}
-		System.out.println("Los materiales ingresados para la Obra " + labours[1] + " fueron:");
+		System.out.println("Para la Obra " + labours[1] + " fueron:");
 		for(b = 0 ; b<materialslabTwo.length ; b++){
 			System.out.println(materialslabTwo[b] + " " );	
 		}
-		System.out.println("Los materiales ingresados para la Obra " + labours[2] + " fueron:");
+		System.out.println("Para la Obra " + labours[2] + " fueron:");
 		for(c = 0 ; c<materialslabThree.length ; c++){
 			System.out.println(materialslabThree[c] + " " );	
 		}

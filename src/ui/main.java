@@ -27,10 +27,12 @@ public class Main{
 		   int [] pricehomecenterlabThree = budget.setpricehomecenterlabThree(sc,quantMaterials,materialslabThree);
 		   int [] pricewarecenterlabThree = budget.setpricewarecenterlabThree(sc,quantMaterials,materialslabThree);
 		   int [] pricewareneighlabThree = budget.setpricewareneighlabThree(sc,quantMaterials,materialslabThree);
+		   System.out.println("-------------------------------Materiales Suministrados----------------------------");
+		   budget.showMaterials(labours,materialslabOne,materialslabTwo,materialslabThree);
 		   System.out.println("-------------------------------Hemos generado los siguentes resultados----------------------------");	
 		   System.out.println("-------------------------Recibo Homecenter-----------------------------");
 		   int totalmaterialsHomecenter = budget.payatHomecenter(labours,quantMaterials,materialslabOne,quantmaterialslabOne,pricehomecenterlabOne,materialslabTwo,quantmaterialslabTwo,pricehomecenterlabTwo,materialslabThree,quantmaterialslabThree,pricehomecenterlabThree);
-		   System.out.println("---------------------Recibo Ferreteria del Centro-----------------------");	
+		   System.out.println("---------------------Recibo Ferreteria del Centro----------------------");	
 		   int totalmaterialsWarecenter = budget.payatWarecenter(labours,quantMaterials,materialslabOne,quantmaterialslabOne,pricewarecenterlabOne,materialslabTwo,quantmaterialslabTwo,pricewarecenterlabTwo,materialslabThree,quantmaterialslabThree,pricewarecenterlabThree);
 		   System.out.println("-------------------Recibo Ferreteria del Barrio------------------------");
 		   int totalmaterialsWareneigh = budget.payatWareneigh(labours,quantMaterials,materialslabOne,quantmaterialslabOne,pricewareneighlabOne,materialslabTwo,quantmaterialslabTwo,pricewareneighlabTwo,materialslabThree,quantmaterialslabThree,pricewareneighlabThree);
@@ -40,10 +42,9 @@ public class Main{
 		   System.out.println("3-SUR");
 		   int zone = sc.nextInt();
 		   int [] delivery = budget.priceDelivery(sc,totalmaterialsHomecenter,totalmaterialsWarecenter,totalmaterialsWareneigh, zone);
-		   budget.showMaterials(labours,materialslabOne,materialslabTwo,materialslabThree);
-		   System.out.println("--------------------------Hemos generado los siguentes valores totales---------------------------");
+		   System.out.println("----------------------------Hemos generado los siguentes valores totales---------------------------");
 		   budget.totaltoPay(labours,delivery,totalmaterialsHomecenter,totalmaterialsWarecenter,totalmaterialsWareneigh);
-		   System.out.println("--------------------------PERO ESPERA TE RECOMENDAMOS ESTO---------------------------");
+		   System.out.println("--------------------------------PERO ESPERA TE RECOMENDAMOS ESTO-----------------------------------");
 		   budget.bestPrices(labours, materialslabOne, materialslabTwo, materialslabThree, quantMaterials, quantmaterialslabOne, pricehomecenterlabOne, pricewarecenterlabOne, pricewareneighlabOne, quantmaterialslabTwo, pricehomecenterlabTwo, pricewarecenterlabTwo, pricewareneighlabTwo, quantmaterialslabThree, pricehomecenterlabThree, pricewarecenterlabThree, pricewareneighlabThree);
 	   }
  
