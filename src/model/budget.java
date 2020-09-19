@@ -9,22 +9,6 @@ public class budget{
 	private final static String CENTER_HARDWARE_STORE = "Ferreteria del centro";
 	private final static String NEIGHBORHOOD_HARDWARE_STORE = "Ferreteria del barrio";
 	/**
-	* Gets the names of the types for each labour <br>
-    * <b> pre: </b> The types of the labours have to be ordered <br>
-    * <b> post: </b> It has been created an array type String with the names entered by console. <br>	
-	* @param sc object is initialized
-	* @return labours
-	*/
-	public static String [] getLabours (Scanner sc){
-		int i = 0;
-		String [] labours = new String [3];
-		for(i=0 ; i<labours.length ; i++){
-			System.out.println("Procede a ingresar el nombre de la Obra " + (i + 1));
-			labours[i] = sc.nextLine();
-		}
-		return labours;
-	}
-	/**
 	* Gets the quantity of materials for each labour <br>
     * <b> pre: </b> The quantity have to be a positive integer number <br>
     * <b> post: </b> It has been created an array type Int with the quantity entered by console for each labour. <br>	
@@ -338,7 +322,17 @@ public class budget{
 			System.out.println(materialslabThree[c] + " " );	
 		}
 	}
-		//-----------------------------------------------receipt for each hardware store----------------------------------------------
+	/**
+	* Creates the homecenter total articles invoice for each labour <br>
+	* <b> pre: </b> <br>
+	* <b> post: </b> It will show the articles, quantity and total price for each labour <br>
+	* @param labours Labours Array != null
+	* @param quantMaterials Quantity of Materials Array != null
+	* @param materialslabOne Names of the material Array for the first labour !=null
+	* @param materialslabTwo Names of the material Array for the second labour !=null
+	* @param materialslabThree Names of the material Array for the third labour !=null
+	* @return totalmaterialsHomecenter
+	*/
         public static int payatHomecenter (String [] labours,int[] quantMaterials, String[] materialslabOne, int[] quantmaterialslabOne, int[] pricehomecenterlabOne,String [] materialslabTwo, int[] quantmaterialslabTwo, int[] pricehomecenterlabTwo,String [] materialslabThree, int[] quantmaterialslabThree, int[] pricehomecenterlabThree){
 			int d = 0,e = 0, f = 0;
 		    int [] totalhomecenterlabourOne = new int[quantMaterials[0]];
@@ -420,7 +414,17 @@ public class budget{
 			 totalmaterialsWareneigh = (sumwareneighlabourOne + sumwareneighlabourTwo + sumwareneighlabourThree);
 			 return totalmaterialsWareneigh;
         }
-	//--------------------------------------------------Delivery----------------------------------------------------------------------------
+	/**
+	* Gets the delivery prices for each hardware store <br>
+	* <b> pre: </b> <br>
+	* <b> post: </b> It has been created an array type Int with the delivery prices for each hardware store. <br>
+	* @param sc object is initialized
+	* @param totalmaterialsHomecenter Quantity of Materials Array != null
+	* @param totalmaterialsWarecenter Names of the material Array for the first labour !=null
+	* @param totalmaterialsWareneigh Names of the material Array for the second labour !=null
+	* @param zone Option zone 1 <= zone <=3
+	* @return totalmaterialsHomecenter
+	*/
     public static int[] priceDelivery (Scanner sc, int totalmaterialsHomecenter, int totalmaterialsWarecenter, int totalmaterialsWareneigh, int zone){
 		   int pricedeliveryHomecenter = 0 , pricedeliveryWarecenter = 0, pricedeliveryWareneigh = 0;
 		   if(totalmaterialsHomecenter<80000  && zone==1){

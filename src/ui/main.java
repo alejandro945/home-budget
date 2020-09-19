@@ -9,8 +9,7 @@ public class Main{
 		   System.out.println("Gracias por usar nuestros servicios"); 
 	   }
 	   public static void getandshowData(Scanner sc){
-		   System.out.println("Tenemos materiales para los siguientes tipos de obras: NEGRA, BLANCA Y PINTURA. Pilas ingrese los nombres respectivamente de acuerdo con su necesidad.");
-		   String [] labours  = budget.getLabours(sc);
+		   String [] labours  = {"Negra", "Blanca", "Pintura"};
 		   int [] quantMaterials = budget.setquantArray(sc,labours);
 		   String [] materialslabOne  = budget.setmaterialslabOne(sc,labours,quantMaterials);
 		   int [] quantmaterialslabOne = budget.setquantmaterialslabOne(sc,quantMaterials,materialslabOne);
@@ -27,7 +26,9 @@ public class Main{
 		   int [] pricehomecenterlabThree = budget.setpricehomecenterlabThree(sc,quantMaterials,materialslabThree);
 		   int [] pricewarecenterlabThree = budget.setpricewarecenterlabThree(sc,quantMaterials,materialslabThree);
 		   int [] pricewareneighlabThree = budget.setpricewareneighlabThree(sc,quantMaterials,materialslabThree);
-		   System.out.println("-------------------------------Materiales Suministrados----------------------------");
+		   System.out.println("Para finalizar solo indicanos en que zona de la ciudad se encuentra ubicado tu inmueble. Elige una opcion: \n 1-NORTE \n 2-CENTRO \n 3-SUR");
+		   int zone = sc.nextInt();
+		   System.out.println("---------------------------------------Materiales Suministrados-----------------------------------");
 		   budget.showMaterials(labours,materialslabOne,materialslabTwo,materialslabThree);
 		   System.out.println("-------------------------------Hemos generado los siguentes resultados----------------------------");	
 		   System.out.println("-------------------------Recibo Homecenter-----------------------------");
@@ -36,11 +37,6 @@ public class Main{
 		   int totalmaterialsWarecenter = budget.payatWarecenter(labours,quantMaterials,materialslabOne,quantmaterialslabOne,pricewarecenterlabOne,materialslabTwo,quantmaterialslabTwo,pricewarecenterlabTwo,materialslabThree,quantmaterialslabThree,pricewarecenterlabThree);
 		   System.out.println("-------------------Recibo Ferreteria del Barrio------------------------");
 		   int totalmaterialsWareneigh = budget.payatWareneigh(labours,quantMaterials,materialslabOne,quantmaterialslabOne,pricewareneighlabOne,materialslabTwo,quantmaterialslabTwo,pricewareneighlabTwo,materialslabThree,quantmaterialslabThree,pricewareneighlabThree);
-		   System.out.println("Para finalizar solo indicanos en que zona de la ciudad se encuentra ubicado tu inmueble. Elige una opcion: ");
-		   System.out.println("1-NORTE");
-		   System.out.println("2-CENTRO");
-		   System.out.println("3-SUR");
-		   int zone = sc.nextInt();
 		   int [] delivery = budget.priceDelivery(sc,totalmaterialsHomecenter,totalmaterialsWarecenter,totalmaterialsWareneigh, zone);
 		   System.out.println("----------------------------Hemos generado los siguentes valores totales---------------------------");
 		   budget.totaltoPay(labours,delivery,totalmaterialsHomecenter,totalmaterialsWarecenter,totalmaterialsWareneigh);
